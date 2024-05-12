@@ -1,0 +1,191 @@
+/* general style */
+*{
+  padding:0;
+  margin:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background-color: whitesmoke;
+
+  /*  background-image:url("../image/image6.png"),linear-gradient(to left,steelblue,purple ,#fff); */
+
+  background-image: url("../project/background5.avif" ) ,radial-gradient(whitesmoke,rgba(51, 54, 54, 0));
+  background-size:cover;
+}
+
+header,footer{
+    position:sticky;
+    background-color:#1e293b;
+    color:whitesmoke;
+    text-align:center;
+  
+  
+}
+
+header{
+  top:0;
+  transform:scaleX(100%);
+  animation:forwards;
+  animation-duration: 5s;;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0.5s;
+}
+
+footer{
+  bottom:0;
+}
+
+nav{
+  background-color:#fff;
+  padding:0.5rem;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+  font-weight:bold;
+  display:flex;
+  justify-content:space-evenly;
+  box-shadow: 2px 2px 4px rgb(109, 34, -10);
+}
+
+nav a,
+nav a:visited{
+  color:#000;
+}
+
+nav a:hover,nav a:focus{
+  color:hsla(0,0%,20%,0.6);
+}
+
+/* main container */
+.container{
+  display:flex;
+  flex-direction:column;
+  padding:10px;
+  margin:10px;
+  color:rgb(20, 7, 7);
+}
+
+h2{
+  margin-top:30px;
+  font-weight:500px;
+  color:rgba(11, 43, 110, 0.801);
+}
+
+h3{
+  font-weight:500px;
+  color:rgba(8, 8, 107, 0.801); 
+}
+
+.skill-font p{
+  font-weight:bold;
+  font-size:1.5rem;
+  color:rgb(46, 44, 45)
+}
+
+
+/* profile-image */
+
+.profile-image{
+ width:400px;
+ height:400px;
+ border:3px solid black;
+ border-radius:200px;
+ padding:5px;
+ box-shadow: 2px 2px 4px rgb(14, 14, 14);
+}
+
+.grid-container {
+  display: grid;
+  place-items: center; /* Center the grid items horizontally and vertically */
+  height: 100vh; /* Example height, adjust as needed */
+  grid-template-columns:no-repeat;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.image-container img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  max-height: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+
+.about{
+  margin-top:0;
+  margin-bottom:30px;
+  display:flex;
+  justify-content:center;
+}
+
+.skills{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:30px;
+}
+
+.nowrap{
+  font-weight:800;
+}
+
+.gmail{
+  color:rgb(8, 8, 121);
+}
+
+/* button */
+.button{
+  margin-top:20px;
+  display:flex;
+  width:50%;
+  flex-grow:1;
+  flex-direction:row;
+  justify-content:center;
+  width:100%;
+  height:auto;
+  background-color: whitesmoke;
+  gap:10px;
+}
+
+.leetcode ,.git-hub,.coding-ninja{
+  font-weight:600;
+  font-size:2rem;
+  background-color:rgb(85, 85, 129);
+  background-image:radial-gradient(whitesmoke,rgb(73, 73, 88));
+  width:250px;
+  height:100px;
+  border:3px solid black;
+  border-radius:50px;
+  color:rgb(59, 37, 37);
+  box-shadow: 2px 2px 4px rgb(14, 14, 14);
+}
+
+/* for small screen */
+@media screen and (min-width:576px){
+  main{
+    justify-content:center;
+    flex-flow:column wrap;
+    padding:1rem;
+  }
+}
+
+/* for medium */
+@media screen and(min-width:676px){
+  nav{
+    display:none;
+  }
+  .grid-container img{
+    margin:20px;
+  }
+}
